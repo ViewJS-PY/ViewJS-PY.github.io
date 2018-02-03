@@ -29,14 +29,14 @@
           <strong>Warning!</strong> Our website is still in development. Please report any problems..
         </div>
         <button type="button" class="btn btn-primary">Get Started!</button>
-        <button type="button" class="btn btn-success" onclick="downloadFile(https://viewjs-py.github.io/ViewFramework.zip)">Download</button>
+        <button type="button" class="btn btn-success" onclick="window.open('https://viewjs-py.github.io/ViewFramework.zip')">Download</button>
         <button type="button" class="btn btn-danger">Live Demo</button>
       </div>
     </div>
     <div class="container">
       <h1>Quick Start</h1>
       <p>View is a lightweight and easy-to-use framework.</p>
-      <div class="w3-panel w3-leftbar w3-light-gray w3-round-large">
+      <div class="w3-panel w3-leftbar w3-light-gray w3-round">
         <p class="w3-xlarge w3-serif"><i>"Make it as simple as possible, but not simpler."</i></p>
         <p>-Albert Einstein</p>
       </div>
@@ -108,52 +108,6 @@ animate(); /* ANIMATE! */
     <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
     <script>
 w3CodeColor();
-url = 'https://viewjs-py.github.io/ViewFramework.zip';
-downloadFile(url); // UNCOMMENT THIS LINE TO MAKE IT WORK
-
-// Source: http://pixelscommander.com/en/javascript/javascript-file-download-ignore-content-type/
-window.downloadFile = function (sUrl) {
-
-    //iOS devices do not support downloading. We have to inform user about this.
-    if (/(iP)/g.test(navigator.userAgent)) {
-       //alert('Your device does not support files downloading. Please try again in desktop browser.');
-       window.open(sUrl, '_blank');
-       return false;
-    }
-
-    //If in Chrome or Safari - download via virtual link click
-    if (window.downloadFile.isChrome || window.downloadFile.isSafari) {
-        //Creating new link node.
-        var link = document.createElement('a');
-        link.href = sUrl;
-        link.setAttribute('target','_blank');
-
-        if (link.download !== undefined) {
-            //Set HTML5 download attribute. This will prevent file from opening if supported.
-            var fileName = sUrl.substring(sUrl.lastIndexOf('/') + 1, sUrl.length);
-            link.download = fileName;
-        }
-
-        //Dispatching click event.
-        if (document.createEvent) {
-            var e = document.createEvent('MouseEvents');
-            e.initEvent('click', true, true);
-            link.dispatchEvent(e);
-            return true;
-        }
-    }
-
-    // Force file download (whether supported by server).
-    if (sUrl.indexOf('?') === -1) {
-        sUrl += '?download';
-    }
-
-    window.open(sUrl, '_blank');
-    return true;
-}
-
-window.downloadFile.isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
-window.downloadFile.isSafari = navigator.userAgent.toLowerCase().indexOf('safari') > -1;
 
     </script>
     <div class="w3-container w3-blue-gray">
