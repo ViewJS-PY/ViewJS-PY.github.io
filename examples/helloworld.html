@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<canvas id="canvas" width="600" height="600"></canvas> 
+<script src="build/view.js"></script> 
+</head> 
+<body> 
+<script> 
+var canvas = document.getElementById("canvas"); /* Get canvas element from dom. */
+var ctx = canvas.getContext("2d"); /* We will use this to add things to the canvas. */
+var app = new VIEW.ViewPort(0,0); /* Setup the View Camera */
+
+var viewSquare = app.addObj(300, 300, null); /* add the square to the view object tracker */
+var squareID = viewSquare[0];
+var square = ctx.fillRect(app.getX(squareID), app.getY(squareID), 50, 50); /* create a square */
+
+function animate() { /* animation loop */
+  ctx.clearRect(0,0,600,600); /* clear canvas */
+  app.updateStats(4); /* Update Viewjs status */
+  square = ctx.fillRect(app.getX(squareID), app.getY(squareID), 50, 50);
+  window.requestAnimationFrame(animate); /* run animation loop */
+}
+animate(); /* ANIMATE! */
+</script> 
+</body> 
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>View</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div class="w3-top">
+      <div class="w3-bar w3-card w3-light-gray">
+        <a href="#" class="w3-bar-item w3-button w3-blue" style=" text-decoration: none;">Home</a>
+        <a href="#" class="w3-bar-item w3-button" style=" text-decoration: none;">About</a>
+        <a href="#" class="w3-bar-item w3-button" style=" text-decoration: none;">Docs</a>
+        <a href="#" class="w3-bar-item w3-button" style=" text-decoration: none;">Tutorials</a>
+      </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid w3-indigo">
+      <div class="container">
+        <h1 class="display-3">ViewJS/PY</h1>
+        <p>The only open-source framework for scrolling experiences.</p>
+        <div class="alert alert-warning">
+          <strong>Warning!</strong> Our website is still in development. Please report any problems..
+        </div>
+        <button type="button" class="btn btn-primary">Get Started!</button>
+        <button type="button" class="btn btn-success">Download</button>
+        <button type="button" class="btn btn-danger">Live Demo</button>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Quick Start</h1>
+      <p>View is a lightweight and easy-to-use framework.</p>
+      <div class="w3-panel w3-leftbar w3-light-gray w3-round-large">
+        <p class="w3-xlarge w3-serif"><i>"Make it as simple as possible, but not simpler."</i></p>
+        <p>-Albert Einstein</p>
+      </div>
+      <p>
+        Getting up and running is a quick proccess. First, you have to setup your workflow. If we were implementing View into a Javascript canvas demo start like this:
+      </p>
+      <div class="w3-panel w3-card w3-light-gray w3-round">
+        <h3>
+        
+        
+        
+        
+        </h3>
+        <h4 class="w3-lightgrey">HTML Quickstart</h4>
+        <div class="w3-code htmlHigh notranslate">
+          &lt;!DOCTYPE html&gt;
+          <br> &lt;html&gt;
+          <br> &lt;head&gt;
+          <br> &lt;canvas id="canvas" width="600" height="600"&gt;&lt;/canvas&gt;
+          <br> &lt;script src="build/view.min.js"&gt;&lt;/script&gt;
+          <br> &lt;/head&gt;
+          <br> &lt;body&gt;
+          <br> &lt;script&gt;
+          <br> // code goes here:
+          <br> &lt;/script&gt;
+          <br> &lt;/body&gt;
+          <br> &lt;/html&gt;
+        </div>
+      </div>
+      <p>Now we have loaded view.js and created the canvas, but when you run this code you'll see a blank page. We need to setup the Javascript side to make our program do anything.</p>
+      <div class="w3-panel w3-card w3-light-gray w3-round">
+        <h3>
+        
+        
+        
+        
+        </h3>
+        <h4 class="w3-lightgrey">Javascript Setup</h4>
+        <div class="w3-code jsHigh notranslate">
+          <pre>
+var canvas = document.getElementById("canvas"); /* Get canvas element from dom. */
+var ctx = canvas.getContext("2d"); /* We will use this to add things to the canvas. */
+var app = new VIEW.ViewPort(0,0); /* Setup the View Camera */
+
+var viewSquare = app.addObj(300, 300, null); /* add the square to the view object tracker */
+var squareID = viewSquare[0]
+var square = ctx.fillRect(app.getX(squareID), app.getY(squareID), 50, 50); /* create a square */
+
+function animate() { /* animation loop */
+  ctx.clearRect(0,0,600,600); /* clear canvas */
+  app.updateStats(4); /* Update Viewjs status */
+  square = ctx.fillRect(app.getX(squareID), app.getY(squareID), 50, 50);
+  window.requestAnimationFrame(animate); /* run animation loop */
+}
+animate(); /* ANIMATE! */
+          </pre>
+        </div>
+        <button type="button" class="btn btn-success">Run Code Snippet</button>
+        <h3>
+        
+        
+        
+        
+        </h3>
+      </div>
+      <p>Your screen should look like this:</p>
+      <br>
+    </div>
+    <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+    <script>
+      w3CodeColor();
+
+    </script>
+    <div class="w3-container w3-blue-gray">
+      <h3>
+      
+      
+      </h3>
+      <h5>Get Started with View today!</h5>
+      <p>Powered by W3.CSS and Bootstrap</p>
+    </div>
+  </body>
+
+</html>
