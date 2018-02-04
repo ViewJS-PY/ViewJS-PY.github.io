@@ -6,7 +6,6 @@
     <meta charset="utf-8">
     <meta name="keywords" content="javascript, scrolling, python, framework, api, module, library, canvas, pixijs, 2d, View, graphics, scroll">
     <meta name="description" content="Framework to create scrolling games and apps.">
-    <meta http-equiv="refresh" content="300">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -98,26 +97,30 @@ animate(); /* ANIMATE! */</code></pre>
       </div>
       <p>View is nearly identical between Python and Javascript. So you won't need to worry about different function parameters and things like that. Now, type the following code to setup Pygame.</p>
         <div class="w3-panel w3-leftbar w3-border-blue w3-lightgrey w3-round" style="background-color: #F5F2F0">
-          <pre><code class="language-python">import pygame, sys # Load Pygame
-import view
-pygame.init() # Initializes Pygame
-app = view.ViewPort(0, 0) # Don't worry about the arguments in ViewPort just yet
-screen = pygame.display.set_mode((600, 600)) # Create Pygame window
-viewSquare = app.ViewPort(300, 300, None) # Adds square to View
-squareID = viewSquare[0]
-squareData = pygame.Rect(app.getX(squareID), app.getY(squareID), 50, 50)
-while True:
-  for event in pygame.event.get():
-    if event.type == pygame.QUIT:
-      sys.exit()
-    elif event.type == pygame.KEYDOWN:
-      if event.key == pygame.K_SPACE:
-        app.setDirection("left")
-    screen.fill((255, 255, 255)) # Clears the screen
-    app.updateStats(4)
-    squareData = pygame.Rect(app.getX(squareID), app.getY(squareID), 50, 50)
-    pygame.draw.rect(screen, [0, 0, 0], squareData, 0)
-    pygame.display.flip()
+          <pre><code class="language-python">import pygame # Adds Pygame to the code
+import view2 as view # Adds View to the code
+pygame.init() # Initalizes Pygame
+app = view.ViewPort(0, 0) # Creates View object registry
+screen = pygame.display.set_mode([600, 600]) # Creates Pygame window
+viewSquare = app.addObj(300, 300, None) # Adds square to View object registry
+squareID = viewSquare[0] # Saves the square's ID to squareID
+squareInfo = pygame.Rect(app.getX(squareID), app.getY(squareID), 50, 50)
+clock = pygame.time.Clock()
+running = True
+while running:
+    clock.tick(60) # Sets FPS to 60
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+        # Listens for when use hits space
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_SPACE:
+                app.setDirection("left") # Sets View camera direction to left
+    screen.fill([255, 255, 255]) # Clears screen
+    app.updateStats(4) # Tells View to update the registry
+    squareInfo = pygame.Rect(app.getX(squareID), app.getY(squareID), 50, 50)
+    pygame.draw.rect(screen, [0, 0, 0], squareInfo, 0) # Draws square
+    pygame.display.flip() # Draws everything to screen
 pygame.quit()
 </code></pre>
         </div>
