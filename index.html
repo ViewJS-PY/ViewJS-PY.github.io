@@ -15,6 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
@@ -43,14 +44,16 @@
     <div class="container">
       <h1>Javascript Quick Start</h1>
       <p>View is a lightweight and easy-to-use framework.</p>
-      <div class="w3-panel w3-leftbar w3-light-gray w3-round">
-        <p class="w3-xlarge w3-serif"><i>"Make it as simple as possible, but not simpler."</i></p>
-        <p>-Albert Einstein</p>
+      <div class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow w3-round">
+        <br>
+        <p><i class="fa fa-quote-right w3-xxlarge w3-opacity"></i><br>
+          <i class="w3-serif w3-xlarge">Make it as simple as possible, but not simpler. <br></i>
+        <footer class="blockquote-footer w3-large">Albert Einstein</footer></p>
       </div>
       <p>
         Getting up and running is a quick process. First, you have to setup your workflow. If we were implementing View into a Javascript canvas demo start like this:
       </p>
-        <div class=" w3-code htmlHIGH w3-panel w3-leftbar w3-border-blue w3-lightgrey" style="background-color: #F5F2F0"><pre><code class="language-html">&lt;!DOCTYPE html&gt;
+        <div class=" w3-code htmlHIGH w3-panel w3-leftbar w3-border-blue w3-lightgrey w3-round" style="background-color: #F5F2F0"><pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;canvas id="canvas" width="600" height="600"&gt;&lt;/canvas&gt;
@@ -63,7 +66,7 @@
   &lt;/body&gt;
 &lt;/html&gt;</code></pre></div>
       <p>Now we have loaded view.js and created the canvas, but when you run this code you'll see a blank page. We need to setup the Javascript side to make our program do anything.</p>
-        <div class="w3-panel w3-leftbar w3-border-blue w3-lightgrey" style="background-color: #F5F2F0">
+        <div class="w3-panel w3-leftbar w3-border-blue w3-lightgrey w3-round" style="background-color: #F5F2F0">
           <pre><code class="language-javascript">var canvas = document.getElementById("canvas"); /* Get canvas element from dom. */
 var ctx = canvas.getContext("2d"); /* We will use this to add things to the canvas. */
 var app = new VIEW.ViewPort(0,0); /* Setup the View Camera */
@@ -94,7 +97,7 @@ animate(); /* ANIMATE! */</code></pre>
         <strong>Note:</strong> We assume that you already have <a href="https://www.pygame.org/news">Pygame</a> installed on your computer. Pygame is a python library to create graphical games and interfaces.
       </div>
       <p>View is nearly identical between Python and Javascript. So you won't need to worry about different function parameters and things like that. Now, type the following code to setup Pygame.</p>
-        <div class="w3-panel w3-leftbar w3-border-blue w3-lightgrey" style="background-color: #F5F2F0">
+        <div class="w3-panel w3-leftbar w3-border-blue w3-lightgrey w3-round" style="background-color: #F5F2F0">
           <pre><code class="language-python">import pygame, sys # Load Pygame
 import view
 pygame.init() # Initializes Pygame
