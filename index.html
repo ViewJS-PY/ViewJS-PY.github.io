@@ -4,15 +4,21 @@
   <head>
     <title>View</title>
     <meta charset="utf-8">
+	<meta name="keywords" content="javascript, scrolling, python, framework, api, module, library, canvas, pixijs, 2d, View, graphics, scroll">
+	<meta name="description" content="Framework to create scrolling games and apps.">
+	<meta http-equiv="refresh" content="300">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-win8.css">
+	<link href="prism.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   </head>
 
   <body>
+  <script src="prism.js"></script>
     <div class="w3-top">
       <div class="w3-bar w3-card w3-light-gray">
         <a href="#" class="w3-bar-item w3-button w3-blue" style=" text-decoration: none;">Home</a>
@@ -26,11 +32,11 @@
         <h1 class="display-3">ViewJS/PY</h1>
         <p>The only open-source framework for scrolling experiences.</p>
         <div class="alert alert-warning">
-          <strong>Warning!</strong> Our website is still in development. Please report any problems..
+          <strong>Warning!</strong> Our website is still in development. Please report any problems. <strong>(Live demo not yet available)</strong>
         </div>
-        <button type="button" class="btn btn-primary">Get Started!</button>
+        <button type="button" class="btn btn-primary" onclick="window.location.href = 'file:///C:/Users/Tarryk/Desktop/TT_DESKTOP_HTML/ViewNetSite/index.html#QuickStart';">Get Started!</button>
         <button type="button" class="btn btn-success" onclick="window.open('https://viewjs-py.github.io/ViewFramework.zip')">Download</button>
-        <button type="button" class="btn btn-danger">Live Demo</button>
+        <button type="button" class="btn btn-danger disabled" id="QuickStart">Live Demo</button>
       </div>
     </div>
     <div class="container">
@@ -41,10 +47,10 @@
         <p>-Albert Einstein</p>
       </div>
       <p>
-        Getting up and running is a quick proccess. First, you have to setup your workflow. If we were implementing View into a Javascript canvas demo start like this:
+        Getting up and running is a quick process. First, you have to setup your workflow. If we were implementing View into a Javascript canvas demo start like this:
       </p>
-      <div class="w3-panel w3-card w3-light-gray w3-round">
-        <h3>
+      <div class="w3-panel w3-card w3-light-gray w3-round-large">
+		<h3>
         
         
         
@@ -67,7 +73,7 @@
         </div>
       </div>
       <p>Now we have loaded view.js and created the canvas, but when you run this code you'll see a blank page. We need to setup the Javascript side to make our program do anything.</p>
-      <div class="w3-panel w3-card w3-light-gray w3-round">
+      <div class="w3-panel w3-card w3-light-gray w3-round-large">
         <h3>
         
         
@@ -102,8 +108,9 @@ animate(); /* ANIMATE! */
         
         </h3>
       </div>
-      <p>Your screen should look like this:</p>
+      <p>You should see a black square</p>
       <br>
+	  <img src="examples\helloworld.png" alt="Hello World Demo">
     </div>
     <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
     <script>
