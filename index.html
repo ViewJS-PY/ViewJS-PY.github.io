@@ -4,21 +4,21 @@
   <head>
     <title>View</title>
     <meta charset="utf-8">
-	<meta name="keywords" content="javascript, scrolling, python, framework, api, module, library, canvas, pixijs, 2d, View, graphics, scroll">
-	<meta name="description" content="Framework to create scrolling games and apps.">
-	<meta http-equiv="refresh" content="300">
+    <meta name="keywords" content="javascript, scrolling, python, framework, api, module, library, canvas, pixijs, 2d, View, graphics, scroll">
+    <meta name="description" content="Framework to create scrolling games and apps.">
+    <meta http-equiv="refresh" content="300">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-win8.css">
-	<link href="prism.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-win8.css">
+    <link href="prism.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   </head>
 
   <body>
-  <script src="prism.js"></script>
+    <script src="prism.js"></script>
     <div class="w3-top">
       <div class="w3-bar w3-card w3-light-gray">
         <a href="#" class="w3-bar-item w3-button w3-blue" style=" text-decoration: none;">Home</a>
@@ -34,13 +34,14 @@
         <div class="alert alert-warning">
           <strong>Warning!</strong> Our website is still in development. Please report any problems. <strong>(Live demo not yet available)</strong>
         </div>
-        <button type="button" class="btn btn-primary" onclick="window.location.href = 'file:///C:/Users/Tarryk/Desktop/TT_DESKTOP_HTML/ViewNetSite/index.html#QuickStart';">Get Started!</button>
+        <button type="button" class="btn btn-primary" onclick="window.location.href = 'https://viewjs-py.github.io/#QuickStart';">Get Started!</button>
         <button type="button" class="btn btn-success" onclick="window.open('https://viewjs-py.github.io/ViewFramework.zip')">Download</button>
         <button type="button" class="btn btn-danger disabled" id="QuickStart">Live Demo</button>
+        <button type="button" class="btn btn-outline-warning" onclick="window.location.href = 'https://viewjs-py.github.io/tutorials/InstallationInstructions/index.html'">Installation Instructions</button>
       </div>
     </div>
     <div class="container">
-      <h1>Quick Start</h1>
+      <h1>Javascript Quick Start</h1>
       <p>View is a lightweight and easy-to-use framework.</p>
       <div class="w3-panel w3-leftbar w3-light-gray w3-round">
         <p class="w3-xlarge w3-serif"><i>"Make it as simple as possible, but not simpler."</i></p>
@@ -49,41 +50,21 @@
       <p>
         Getting up and running is a quick process. First, you have to setup your workflow. If we were implementing View into a Javascript canvas demo start like this:
       </p>
-      <div class="w3-panel w3-card w3-light-gray w3-round-large">
-		<h3>
-
-
-
-
-        </h3>
-        <h4 class="w3-lightgrey">HTML Quickstart</h4>
-        <div class="w3-code htmlHigh notranslate">
-          &lt;!DOCTYPE html&gt;
-          <br> &lt;html&gt;
-          <br> &lt;head&gt;
-          <br> &lt;canvas id="canvas" width="600" height="600"&gt;&lt;/canvas&gt;
-          <br> &lt;script src="build/view.min.js"&gt;&lt;/script&gt;
-          <br> &lt;/head&gt;
-          <br> &lt;body&gt;
-          <br> &lt;script&gt;
-          <br> // code goes here:
-          <br> &lt;/script&gt;
-          <br> &lt;/body&gt;
-          <br> &lt;/html&gt;
-        </div>
-      </div>
+        <div class=" w3-code htmlHIGH w3-panel w3-leftbar w3-border-blue w3-lightgrey" style="background-color: #F5F2F0"><pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;canvas id="canvas" width="600" height="600"&gt;&lt;/canvas&gt;
+    &lt;script src="build/view.min.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;script&gt;
+    // code goes here:
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
       <p>Now we have loaded view.js and created the canvas, but when you run this code you'll see a blank page. We need to setup the Javascript side to make our program do anything.</p>
-      <div class="w3-panel w3-card w3-light-gray w3-round-large">
-        <h3>
-
-
-
-
-        </h3>
-        <h4 class="w3-lightgrey">Javascript Setup</h4>
-        <div class="w3-code jsHigh notranslate">
-          <pre>
-var canvas = document.getElementById("canvas"); /* Get canvas element from dom. */
+        <div class="w3-panel w3-leftbar w3-border-blue w3-lightgrey" style="background-color: #F5F2F0">
+          <pre><code class="language-javascript">var canvas = document.getElementById("canvas"); /* Get canvas element from dom. */
 var ctx = canvas.getContext("2d"); /* We will use this to add things to the canvas. */
 var app = new VIEW.ViewPort(0,0); /* Setup the View Camera */
 
@@ -97,29 +78,51 @@ function animate() { /* animation loop */
   square = ctx.fillRect(app.getX(squareID), app.getY(squareID), 50, 50);
   window.requestAnimationFrame(animate); /* run animation loop */
 }
-animate(); /* ANIMATE! */
-          </pre>
+animate(); /* ANIMATE! */</code></pre>
         </div>
-        <button type="button" class="btn btn-success">Run Code Snippet</button>
-        <h3>
-
-
-
-
-        </h3>
-      </div>
       <p>You should see a black square</p>
-	  <img src="examples\helloworld.png" class="img-thumbnail" alt="Hello World Demo">
+      <img src="examples\helloworld.png" class="img-thumbnail" alt="Hello World Demo">
       <h3>
 
 
 
       </h3>
-      <p>Now, lets see whether this works. If you are using Google Chrome, click <kbd>Ctrl + Shift + J</kbd> to go into the developer console. Don't pay attention to the rainbow banner that states which version of view is in use. Type the function to move to the left: <code>app.setDirection("left");</code> You will see the cube move out of sight. Actually, it wasn't the cube that moved away.. YOU moved away. You just made a simple View program! Try the live demo <a href="https://viewjs-py.github.io/examples/helloworld.html">here.</a></p>
+      <p>Now, lets see whether this works. Open the html file you created in a browser (preferably Google Chrome). If you are using Google Chrome, click <kbd>Ctrl + Shift + J</kbd> to go into the developer console. In Mozilla Firefox and Microsoft Edge hold
+        <kbd>Fn + F11</kbd>. If the doesn't work, try holding <kbd>F11</kbd>. In Chrome/Firefox you may see a rainbow banner stating which version of View you are using, don't pay attention to that. Type the function to move to the left: <code>app.setDirection("left");</code>        You will see the cube move out of sight. Actually, it wasn't the cube that moved away.. YOU moved away. You just made a simple View program! Try the live demo <a href="https://viewjs-py.github.io/examples/helloworld.html">here.</a></p>
+      <h1>Python Quick Start</h1>
+      <div class="alert alert-warning">
+        <strong>Note:</strong> We assume that you already have <a href="https://www.pygame.org/news">Pygame</a> installed on your computer. Pygame is a python library to create graphical games and interfaces.
+      </div>
+      <p>View is nearly identical between Python and Javascript. So you won't need to worry about different function parameters and things like that. Now, type the following code to setup Pygame.</p>
+        <div class="w3-panel w3-leftbar w3-border-blue w3-lightgrey" style="background-color: #F5F2F0">
+          <pre><code class="language-python">import pygame, sys # Load Pygame
+import view
+pygame.init() # Initializes Pygame
+app = view.ViewPort(0, 0) # Don't worry about the arguments in ViewPort just yet
+screen = pygame.display.set_mode((600, 600)) # Create Pygame window
+viewSquare = app.ViewPort(300, 300, None) # Adds square to View
+squareID = viewSquare[0]
+squareData = pygame.Rect(app.getX(squareID), app.getY(squareID), 50, 50)
+while True:
+  for event in pygame.event.get():
+    if event.type == pygame.QUIT:
+      sys.exit()
+    elif event.type == pygame.KEYDOWN:
+      if event.key == pygame.K_SPACE:
+        app.setDirection("left")
+    screen.fill((255, 255, 255)) # Clears the screen
+    app.updateStats(4)
+    squareData = pygame.Rect(app.getX(squareID), app.getY(squareID), 50, 50)
+    pygame.draw.rect(screen, [0, 0, 0], squareData, 0)
+    pygame.display.flip()
+pygame.quit()
+</code></pre>
+        </div>
     </div>
     <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
     <script>
-w3CodeColor();
+      w3CodeColor();
+
     </script>
     <div class="w3-container w3-blue-gray">
       <h3>
@@ -127,7 +130,7 @@ w3CodeColor();
 
 
       </h3>
-      <h5>Get Started with View today!</h5>
+      <h5>Get Started with View today for free!</h5>
       <p>Website powered by W3.CSS and Bootstrap</p>
     </div>
   </body>
