@@ -16,7 +16,7 @@ ViewPort.prototype.addObj = function (x_pos_r, y_pos_r, direction) {
 	this.pin += 1;
 	return [this.pin, [x_pos_r, y_pos_r]];
 };
-ViewPort.prototype.changeDirection = function (new_direction) {
+ViewPort.prototype.setDirection = function (new_direction) {
 	var a = 0;
 	while (a <= this.obj_data.length-1) {
 		this.obj_data[a][2] = new_direction;

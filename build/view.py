@@ -23,7 +23,7 @@ class ViewPort:
         self.obj_data.append([x_pos_r, y_pos_r, direction])
         self.pin += 1
         return self.pin, [x_pos_r, y_pos_r]
-    def changeDirection(self, new_direction):
+    def setDirection(self, new_direction):
         #self.obj_data[pin][2] = new_direction
         a = 0
         for a in range(len(self.obj_data)):
