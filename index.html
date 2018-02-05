@@ -98,7 +98,7 @@ animate(); /* ANIMATE! */</code></pre>
       <p>View is nearly identical between Python and Javascript. So you won't need to worry about different function parameters and things like that. Now, type the following code to setup Pygame.</p>
         <div class="w3-panel w3-leftbar w3-border-blue w3-lightgrey w3-round" style="background-color: #F5F2F0">
           <pre><code class="language-python">import pygame # Adds Pygame to the code
-import view2 as view # Adds View to the code
+import view # Adds View to the code
 pygame.init() # Initalizes Pygame
 app = view.ViewPort(0, 0) # Creates View object registry
 screen = pygame.display.set_mode([600, 600]) # Creates Pygame window
@@ -121,9 +121,14 @@ while running:
     squareInfo = pygame.Rect(app.getX(squareID), app.getY(squareID), 50, 50)
     pygame.draw.rect(screen, [0, 0, 0], squareInfo, 0) # Draws square
     pygame.display.flip() # Draws everything to screen
-pygame.quit()
-</code></pre>
+pygame.quit()</code></pre>
         </div>
+    <p>When you press <kbd>SPACE</kbd> you will see the square move out of sight. Actually, it wasn't the SQUARE that moved. YOU moved away from the SQUARE!</p>
+    <p>Here is a video of the code we just wrote:</p>
+    <video width=900 height=600 controls>
+      <source src="examples/helloworld.mp4" type="video/mp4">
+Your browser does not support the video tag.
+    </video>
     </div>
     <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
     <script>
